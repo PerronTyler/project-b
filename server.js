@@ -1,7 +1,6 @@
 import express from 'express'
-import "./server/config/mongoose.config.js";
 import cors from 'cors'
-import decksRouter from './server/routes/decks.routes.js'
+
 
 // import playersRouter from './server/routes/players.routes'
 

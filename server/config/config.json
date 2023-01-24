@@ -1,0 +1,19 @@
+{
+    "Environment": {
+        "app_name": "test",
+        "app_description": "learning how to connect DB with mongodb",
+        "node_protocol": "http",
+        "hostname": "0.0.0.0",
+        "node_port": 8000,
+        "DBServers": {
+            "test": "some text goes here I don't know yet"
+        },
+        "DBServerName": "testTwo",
+        "LoggingDBServername": "testTwo",
+        "AlsoLogToConsole": true,
+        "Database": "testThree"
+    },
+    "Session": {
+        "secret": "Juder"
+    }
+}       
