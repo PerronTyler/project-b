@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json(), express.urlencoded({ extended: true }));
 
 const rootRouter = new express.Router()
-rootRouter.use("/api/decks", decksRouter)
+// rootRouter.use("/api/decks", decksRouter)
 
 
 app.use(rootRouter)
