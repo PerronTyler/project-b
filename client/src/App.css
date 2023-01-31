@@ -24,27 +24,38 @@
 }
 
 .card-image-1 {
-    width: 30%;
     background-image: url('./images/DashboardAssets/kitchen.jpg');
     background-size:cover;
     background-position: center right 35%;
-    padding: 150px 50px 150px 50px;
+    padding: 150px 20px 150px 20px;
 }
 
 .card-image-2 {
-    width: 30%;
     background-image: url('./images/DashboardAssets/bathremodel.jpg');
     background-size:cover;
     background-position: center right 30%;
-    padding: 150px 50px 150px 50px;
+    padding: 150px 20px 150px 20px;
 }
 
 .card-image-3 {
-    width: 30%;
     background-image: url('./images/DashboardAssets/deck.jpg');
     background-size:cover;
     background-position: center center;
-    padding: 150px 50px 150px 50px;
+    padding: 150px 20px 150px 20px;
+}
+
+.card-image-4 {
+    background-image: url('./images/DashboardAssets/remodel.jpg');
+    background-size:cover;
+    background-position: center center;
+    padding: 150px 20px 150px 20px;
+}
+
+.card-image-5 {
+    background-image: url('./images/DashboardAssets/custom.jpg');
+    background-size:cover;
+    background-position: center center;
+    padding: 150px 20px 150px 20px;
 }
 
 .browse-now-button {
@@ -53,4 +64,8 @@
 
 .call-us-button {
     @apply text-black bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-4
+}
+
+.custom-container {
+    margin: 15px;
 }
