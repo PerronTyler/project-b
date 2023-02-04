@@ -18,7 +18,7 @@ function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Header />} >
+        <Route element={<Header />} path='/'>
           <Route element={<Main />} path='/'/>
         </Route>
       </Routes>
