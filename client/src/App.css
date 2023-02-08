@@ -18,20 +18,53 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #fcfcfc;
+    line-height: 1.6;
 }
 
-.asterisk {
-    height: 50px;
-    width: 50px;
+.team-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.right-image-1 {
+.owner-shift-1 {
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-top: 8px solid white;
+    border-right: 8px solid white;
+}
+
+.owner-shift-2 {
+    width: 100%;
+    border-top-right-radius: 50%;
+    border-bottom: 8px solid #cffafe;
+    border-left: 8px solid #cffafe;
+}
+
+.dream-image {
     background-image: url('./images/DashboardAssets/builddream.jpg');
     background-size: cover;
-    background-position: center right 50%;
-    padding-top: 260px;
-    padding-bottom: 100px;
-    width: 65%;
+    background-position: center center;
+    -webkit-background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    filter: blur(5px);
+    position: relative;
+}
+
+.dream-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    z-index: 5;
+    width: 45%;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    color: #fff;
+    font-weight: bold;
+    border: 10px inset #fff;
 }
 
 .card-image-1 {
@@ -82,3 +115,49 @@ body {
     @apply bg-[#3351fc] hover:bg-[#4460ff]/80 focus:ring-4 focus:outline-none focus:ring-[#4460ff]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#3351fc]/80 dark:focus:ring-[#4460ff]/40 mr-2 mb-4 text-white
 }
 
+.underlined {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.underlined:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 7px;
+    width: 105%;
+    border: solid 3px #ac1cdc;
+    border-color: #ac1cdc transparent transparent transparent;
+    border-radius: 50%;
+}
+
+.small {
+    font-size: 100%;
+}
+
+.custom-container {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: transform 500ms ease;
+}
+
+.custom-container:hover{
+    border-color: #ac1cdc;
+    transform: scale(1.05);
+}
+
+.card-container {
+    height: 80vh;
+    width: 100%;
+}
+
+.logo-height {
+    height: 80px;
+    width: 80px;
+}
+
+.custom-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
