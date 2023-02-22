@@ -93,7 +93,7 @@ const Main = (props) => {
         <div>
             <div className='dream-image'></div>
                 <div className='dream-border'>
-                    <h1 className='font-medium leading-tight text-5xl text-white text-center'>
+                    <h1 className='font-medium leading-tight text-5xl text-transparent bg-clip-text text-slate-900 text-center'>
                         We help to <br />
                         build your dream.</h1>
                     <p>Building with <br /><span className='text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-yellow-500 text-xl'>vision, quality, and pride.</span>

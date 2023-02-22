@@ -3,6 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Main from './views/Main';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route element={<Header />} path='/'>
           <Route element={<Main />} path='/'/>
+          <Route element={<Contact />} path='/contact-us' /> 
         </Route>
       </Routes>
     </div>
