@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Main from './views/Main';
 import Contact from './components/Contact';
+import Gallery from './components/Gallery';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       <Routes>
         <Route element={<Header />} path='/'>
           <Route element={<Main />} path='/'/>
-          <Route element={<Contact />} path='/contact-us' /> 
+          <Route element={<Contact />} path='/contact-us' />
+          <Route element={<Gallery />} path='/gallery' />
         </Route>
       </Routes>
     </div>

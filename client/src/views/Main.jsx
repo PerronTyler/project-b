@@ -106,17 +106,17 @@ const Main = (props) => {
                     <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
                     <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
                     <div className="m-8 relative space-y-4">
-                    <div>
-                        <h1 className='text-4xl font-bold text-center p-4'>Over 25 years of <label
-                        className='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500'
-                        >experience</label></h1>
-                        <p className='text-center'><a className='call-us-button' href="/#">Call us now</a></p>
-                    </div>
-                    <div>
-                        <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]} ssr={true} infinite={true} autoPlaySpeed={10000} autoPlay={props.deviceType !== "mobile" ? true : false} transitionDuration={500}>
-                            {services}
-                        </Carousel>
-                    </div>
+                        <div>
+                            <h1 className='text-4xl font-bold text-center p-4'>Over 25 years of <label
+                            className='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500'
+                            >experience</label></h1>
+                            <p className='text-center'><a className='call-us-button' href="/#">Call us now</a></p>
+                        </div>
+                        <div>
+                            <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]} ssr={true} infinite={true} autoPlaySpeed={10000} autoPlay={props.deviceType !== "mobile" ? true : false} transitionDuration={500}>
+                                {services}
+                            </Carousel>
+                        </div>
                     </div>
                 </div>
             </div>

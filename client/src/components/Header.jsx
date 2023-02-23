@@ -13,11 +13,11 @@ const Header = () => {
         setNav(!nav);
     };
     let Links = [
-        { name: "Company", link: "/#" },
-        { name: "Services", link: "/#" },
-        { name: "Gallery", link: "/#" },
+        { name: "Company", link: "/company" },
+        { name: "Gallery", link: "/gallery" },
         { name: "Contact", link: "/contact-us" },
     ];
+    
     return (
         <>
             <div className='flex justify-between items-center h-20 px-4 bg-zinc-900 text-black'>

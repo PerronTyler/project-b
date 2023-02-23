@@ -160,3 +160,44 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.gallery-line {
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: black;
+    border: 1px solid gray;
+}
+
+.gallery-container {
+    width: 100%;
+}
+
+.gallery-pic {
+    height: 350px;
+    width: 350px;
+}
+
+.gallery-effect {
+    --b: 5px;
+    --d: 10px;
+    --o: 10px;
+    --s: 1;
+    --_d: calc(var(--d) + var(--s)*1em);
+    --_g: calc(100% - 1.7*(var(--_d) + var(--b)));
+    --_m:
+    conic-gradient(from 90deg at var(--_d) var(--_d),#9191918e 25%,#d1d1d1 0)
+    0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+    linear-gradient(#a9a9a9f9 0 0) 50%/var(--_g) var(--_g) no-repeat;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    font-size: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.gallery-effect:hover {
+    font-size: var(--o);
+}
