@@ -1,10 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-// import BathImgs from '../images/GalleryAssets/BathImgs'
-// import DeckImgs from '../images/GalleryAssets/DeckImgs'
-// import KitchenImgs from '../images/GalleryAssets/KitchenImgs'
-// import RemodelImgs from '../images/GalleryAssets/RemodelImgs'
 import { GALLERYDATA } from './Images.js'
+import Footer from './Footer.jsx'
 
 const Gallery = () => {
     const [products, setProducts] = useState(GALLERYDATA)
@@ -43,6 +40,7 @@ const Gallery = () => {
                     }
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
