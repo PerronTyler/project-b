@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Main from './views/Main';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
+import Company from './components/Company';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route element={<Main />} path='/'/>
           <Route element={<Contact />} path='/contact-us' />
           <Route element={<Gallery />} path='/gallery' />
+          <Route element={<Company />} path='/company' />
         </Route>
       </Routes>
     </div>

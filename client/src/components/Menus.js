@@ -6,14 +6,14 @@ export const CONTACT = [
     { name: "Hours: M-F from 8am - 5pm", link: "#" }
 ];
 export const SERVICES = [
-    { name: "Baths", link: "#" },
-    { name: "Decks", link: "#" },
-    { name: "Roofing", link: "#" },
-    { name: "Kitchens", link: "#" },
-    { name: "Custom Order", link: "#" },
+    { name: "Baths", link: "/gallery" },
+    { name: "Decks", link: "/gallery" },
+    { name: "Roofing", link: "/gallery" },
+    { name: "Kitchens", link: "/gallery" },
+    { name: "Custom Order", link: "/contact-us" },
 ];
 export const COMPANY = [
-    { name: "About Us", link: "#" },
+    { name: "About Us", link: "/company" },
     { name: "Testimonials", link: "#" },
     { name: "Diversity & inclusion", link: "#" },
 ];

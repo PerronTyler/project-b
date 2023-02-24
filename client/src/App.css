@@ -216,3 +216,46 @@ body {
 .form-color {
     background-color: #e0bb75;
 }
+
+.company-image-1 {
+    background-image: url('./images/CompanyAssets/Company03.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.company-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.mosaic {
+    display: grid;
+    margin-bottom: 2rem;
+    grid-template-rows: 1fr;
+}
+
+.mosaic__item:first-of-type {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.mosaic__item:last-of-type {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+}
+
+.img-reverse {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.build-w-us {
+    background-image: url('./images/CompanyAssets/Company07.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}

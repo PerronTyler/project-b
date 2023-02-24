@@ -7,7 +7,7 @@ const ServiceCard = (props) => {
         <div className={`flex flex-col ml-4 mr-4 max-w-md bg-white border border-gray-300 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${props.imageurl}`}>
             <h5 className="mb-2 text-4xl text-center font-bold tracking-tight text-white">{props.name}</h5>
             <p className='align-middle text-center mt-4'>
-                <a className='browse-now-button' href="/#">
+                <a className='browse-now-button' href={`/${props.urlName}`}>
                     Browse Now
                     <svg
                         className="ml-2 -mr-1 h-4 w-4"

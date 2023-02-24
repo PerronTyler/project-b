@@ -49,7 +49,7 @@ const Contact = () => {
             </div>
             <div className='flex justify-evenly flex-wrap'>
                 <div className='w-full max-w-md'>
-                    <form onSubmit={handleSubmit} className='form-color shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+                    <form onSubmit={handleSubmit} className='form-color shadow-md rounded px-8 pt-6 pb-8 mb-20'>
                         <div className='mb-4'>
                             <label htmlFor="name" className='block text-slate-800 text-sm font-bold mb-2'>Enter Name: </label>
                             <input type="text" name='name' placeholder='full name' className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline' value={values.name} onChange={handleChange}/>
@@ -73,7 +73,7 @@ const Contact = () => {
                         <button className='inline-block align-baseline font-bold text-sm text-white bg-slate-800 p-4 hover:text-amber-200'>Submit</button>
                     </form>
                 </div>
-                <div className='w-full max-w-md bg-zinc-100 p-4 mb-4'>
+                <div className='w-full max-w-md bg-zinc-100 p-4 mb-20'>
                     <div className='p-4 ml-4'>
                         <h2 className='italic text-2xl'>General Inquiries</h2>
                         <p>Have a question? Get in touch at:</p>
@@ -83,7 +83,7 @@ const Contact = () => {
                     <div className='p-4 ml-4'>
                         <h2 className='italic text-2xl'>Our Location</h2>
                         <p>South Shore, MA</p>
-                        <p className='text-yellow-400'>Get Directions</p>
+                        <a href='/#' className='text-yellow-400'>Get Directions</a>
                     </div>
                 </div>
             </div>

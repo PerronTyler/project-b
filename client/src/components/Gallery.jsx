@@ -22,8 +22,8 @@ const Gallery = () => {
                 <h4>Filter by Category</h4>
                 <div className='p-4'>
                     <button className='btns' onClick={() => setProducts(GALLERYDATA)}>All</button>
-                    <button className='btns' onClick={() => filterCategory('Baths')}>Baths</button>
                     <button className='btns' onClick={() => filterCategory('Kitchens')}>Kitchens</button>
+                    <button className='btns' onClick={() => filterCategory('Baths')}>Baths</button>
                     <button className='btns' onClick={() => filterCategory('Decks')}>Decks</button>
                     <button className='btns' onClick={() => filterCategory('Remodels')}>Remodels</button>
                 </div>

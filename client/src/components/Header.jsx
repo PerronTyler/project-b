@@ -47,7 +47,6 @@ const Header = () => {
                     }
                 </ul>
             </div>
-            <hr />
             <Outlet />
         </>
     )

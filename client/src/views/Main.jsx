@@ -34,26 +34,31 @@ const Main = (props) => {
         {
             id: 1,
             imageurl: "card-image-1",
+            urlName: "gallery",
             name: "Kitchens"
         },
         {
             id: 2,
             imageurl: "card-image-2",
+            urlName: "gallery",
             name: "Baths"
         },
         {
             id: 3,
             imageurl: "card-image-3",
+            urlName: "gallery",
             name: "Decks"
         },
         {
             id: 4,
             imageurl: "card-image-4",
+            urlName: "gallery",
             name: "Remodel"
         },
         {
             id: 5,
             imageurl: "card-image-5",
+            urlName: "contact-us",
             name: "Custom"
         },
     ]
@@ -86,7 +91,7 @@ const Main = (props) => {
 
     const whyUs = whyData.map((item, index) => <WhyCard key={index} title={item.title} desc={item.description} imgurl={item.imgurl}/>)
 
-    const services = serviceData.map((item, index) => <ServiceCard key={index} imageurl={item.imageurl} name={item.name} />);
+    const services = serviceData.map((item, index) => <ServiceCard key={index} imageurl={item.imageurl} name={item.name} urlName={item.urlName}/>);
 
 
     return (
@@ -102,9 +107,9 @@ const Main = (props) => {
             <hr />
             <div className="card-container flex items-center justify-center px-16">
                 <div className="relative w-full max-w-5xl">
-                    <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                    <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                    <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                    <div className="absolute top-0 -left-4 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-80 animate-blob"></div>
+                    <div className="absolute top-20 -right-20 w-80 h-80 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-80 animate-blob animation-delay-2000"></div>
+                    <div className="absolute -bottom-8 left-4 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-80 animate-blob animation-delay-4000"></div>
                     <div className="m-8 relative space-y-4">
                         <div>
                             <h1 className='text-4xl font-bold text-center p-4'>Over 25 years of <label
