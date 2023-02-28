@@ -147,7 +147,7 @@ body {
 }
 
 .card-container {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -176,8 +176,8 @@ body {
 }
 
 .gallery-pic {
-    height: 350px;
-    width: 350px;
+    height: 370px;
+    width: 500px;
 }
 
 .gallery-effect {

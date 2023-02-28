@@ -115,7 +115,7 @@ const Main = (props) => {
                             <h1 className='text-4xl font-bold text-center p-4'>Over 25 years of <label
                             className='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500'
                             >experience</label></h1>
-                            <p className='text-center'><a className='call-us-button' href="/#">Call us now</a></p>
+                            <p className='text-center'><a className='call-us-button' href="/contact-us">Call us now</a></p>
                         </div>
                         <div>
                             <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]} ssr={true} infinite={true} autoPlaySpeed={10000} autoPlay={props.deviceType !== "mobile" ? true : false} transitionDuration={500}>

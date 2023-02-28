@@ -1,17 +1,44 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { GALLERYDATA } from './Images.js'
 import Footer from './Footer.jsx'
+import Pagination from './Pagination.js'
+import Posts from './Posts.js'
 
 const Gallery = () => {
-    const [products, setProducts] = useState(GALLERYDATA)
+    const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [postsPerPage, setPostsPerPage] = useState(6)
 
     const filterCategory = (categoryItem) => {
         const result = GALLERYDATA.filter((currentCategory) => {
             return currentCategory.category === categoryItem;
         });
-        setProducts(result);
+        setPosts(result);
     }
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            const result = GALLERYDATA
+            setPosts(result)
+            setLoading(false)
+        }
+        fetchPosts();
+    }, [])
+
+    if (loading) {
+        return <h2>Loading...</h2>
+    }
+
+    // get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <>
@@ -21,7 +48,7 @@ const Gallery = () => {
             <div className='text-center mt-10 mb-10'>
                 <h4>Filter by Category</h4>
                 <div className='p-4'>
-                    <button className='btns' onClick={() => setProducts(GALLERYDATA)}>All</button>
+                    <button className='btns' onClick={() => setPosts(GALLERYDATA)}>All</button>
                     <button className='btns' onClick={() => filterCategory('Kitchens')}>Kitchens</button>
                     <button className='btns' onClick={() => filterCategory('Baths')}>Baths</button>
                     <button className='btns' onClick={() => filterCategory('Decks')}>Decks</button>
@@ -29,15 +56,9 @@ const Gallery = () => {
                 </div>
             </div>
             <div className='gallery-container'>
-                <div className='grid grid-cols-4 gap-4 items-center justify-items-center p-4 mt-4 mb-4'>
-                    {
-                        products.map((product) =>
-                        <div key={product.id}>
-                            <img className='gallery-pic gallery-effect' src={product.image} alt="pic" />
-                            <p className='text-center text-stone-500 mt-2'>{product.name}</p>
-                        </div>
-                        )
-                    }
+                <div>
+                    <Posts posts={currentPosts} loading={loading}/>
+                    <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
                 </div>
             </div>
             <Footer />
