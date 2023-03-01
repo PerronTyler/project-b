@@ -10,14 +10,9 @@ const Gallery = () => {
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage] = useState(6)
-
-    const filterCategory = (categoryItem) => {
-        const result = GALLERYDATA.filter((currentCategory) => {
-            return currentCategory.category === categoryItem;
-        });
-        setPosts(result);
-    }
-
+    let kitchenData = {}
+    let decksData = {}
+    
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
@@ -27,6 +22,31 @@ const Gallery = () => {
         }
         fetchPosts();
     }, [])
+
+    const filterCategory = (categoryItem) => {
+        const result = GALLERYDATA.filter((currentCategory) => {
+            return currentCategory.category === categoryItem;
+        });
+        setPosts(result);
+    }
+
+    const intializeKitchenData = (GALLERYDATA) => {
+        for (let index in GALLERYDATA) {
+            if(index[category] == "Kitchen") {
+                kitchenData[index] = GALLERYDATA[index] 
+            }
+        }
+    }
+    intializeKitchenData(GALLERYDATA)
+    
+    const intializeDecksData = (GALLERYDATA) => {
+        for (let index in GALLERYDATA) {
+            if(index[category] == "Decks") {
+                decksData[index] = GALLERYDATA[index] 
+            }
+        }
+    }
+    intializeDecksData(GALLERYDATA)
 
     if (loading) {
         return <h2>Loading...</h2>
@@ -49,7 +69,7 @@ const Gallery = () => {
                 <h4>Filter by Category</h4>
                 <div className='p-4'>
                     <button className='btns' onClick={() => setPosts(GALLERYDATA)}>All</button>
-                    <button className='btns' onClick={() => filterCategory('Kitchens')}>Kitchens</button>
+                    <button className='btns' onClick={() => setPosts(kitchenData)}>Kitchens</button>
                     <button className='btns' onClick={() => filterCategory('Baths')}>Baths</button>
                     <button className='btns' onClick={() => filterCategory('Decks')}>Decks</button>
                     <button className='btns' onClick={() => filterCategory('Remodels')}>Remodels</button>
