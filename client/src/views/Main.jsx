@@ -2,10 +2,9 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Footer from '../components/Footer';
+import OwnerCard from '../components/OwnerCard';
 import ServiceCard from '../components/ServiceCard';
 import WhyCard from '../components/WhyCard';
-import logo from '../images/OwnerAssets/owner1.jpg'
-import logo2 from '../images/OwnerAssets/owner2.jpg'
 
 
 const responsive = {
@@ -138,20 +137,13 @@ const Main = (props) => {
                 <div className='text-white p-4'>
                     <p className='text-6xl text-center mb-4'>Meet the team</p>
                 </div>
-                <div className='flex justify-between'>
-                    <div className='w-2/5 ml-4 p-4'>
+                <div className=''>
+                    <div>
+                        <OwnerCard />
+                    </div>
+                    <div className='ml-4 p-4'>
                         <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dicta. Placeat illo, voluptatum necessitatibus possimus et, repudiandae beatae, pariatur deserunt itaque dolorem eius nobis odit quos maiores voluptate saepe accusamus?</p>
                         <p className='text-white mt-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste cum corrupti consequatur exercitationem maxime, voluptatem doloribus odit atque rerum modi, facere inventore tenetur eaque suscipit quis blanditiis in veritatis iusto?</p>
-                    </div>
-                    <div className='flex p-4 gap-4 w-3/5'>
-                        <div>
-                            <p className='text-white text-4xl mb-4'>John Smith</p>
-                            <img src={logo} className="owner-shift-1 border-b-8 border-b-stone-200" alt="pic" />
-                        </div>
-                        <div>
-                            <img src={logo2} className="owner-shift-2 border-t-8 border-t-stone-300" alt="pic" />
-                            <p className='text-white text-4xl text-right mt-4'>Jane Doe</p>
-                        </div>
                     </div>
                 </div> 
             </div>

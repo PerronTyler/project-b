@@ -12,6 +12,7 @@ const Header = () => {
     const handleNav = () => {
         setNav(!nav);
     };
+    
     let Links = [
         { name: "Company", link: "/company" },
         { name: "Gallery", link: "/gallery" },

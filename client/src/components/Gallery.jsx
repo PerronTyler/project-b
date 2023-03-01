@@ -9,7 +9,7 @@ const Gallery = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [postsPerPage, setPostsPerPage] = useState(6)
+    const [postsPerPage] = useState(6)
 
     const filterCategory = (categoryItem) => {
         const result = GALLERYDATA.filter((currentCategory) => {

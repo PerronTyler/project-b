@@ -6,6 +6,7 @@ import Main from './views/Main';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Company from './components/Company';
+import OwnerCard from './components/OwnerCard';
 
 
 function App() {
