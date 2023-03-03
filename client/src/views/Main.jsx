@@ -1,10 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Footer from '../components/Footer';
-import OwnerCard from '../components/OwnerCard';
-import ServiceCard from '../components/ServiceCard';
-import WhyCard from '../components/WhyCard';
+import { Footer, OwnerCard, ServiceCard, WhyCard } from '../components/mainBarrel.js'
 
 
 const responsive = {
@@ -27,38 +24,42 @@ const responsive = {
     }
 }
 
-const Main = (props) => {
+const Main = ({setPosts, setCurrentPage, kitchenData, bathData, deckData, remodelData}) => {
 
     const serviceData = [
         {
             id: 1,
             imageurl: "card-image-1",
             urlName: "gallery",
-            name: "Kitchens"
+            name: "Kitchens",
+            data: kitchenData
         },
         {
             id: 2,
             imageurl: "card-image-2",
             urlName: "gallery",
-            name: "Baths"
+            name: "Baths",
+            data: bathData
         },
         {
             id: 3,
             imageurl: "card-image-3",
             urlName: "gallery",
-            name: "Decks"
+            name: "Decks",
+            data: deckData
         },
         {
             id: 4,
             imageurl: "card-image-4",
             urlName: "gallery",
-            name: "Remodel"
+            name: "Remodel",
+            data: remodelData
         },
         {
             id: 5,
             imageurl: "card-image-5",
             urlName: "contact-us",
-            name: "Custom"
+            name: "Custom",
         },
     ]
     const whyData = [
@@ -90,7 +91,7 @@ const Main = (props) => {
 
     const whyUs = whyData.map((item, index) => <WhyCard key={index} title={item.title} desc={item.description} imgurl={item.imgurl}/>)
 
-    const services = serviceData.map((item, index) => <ServiceCard key={index} imageurl={item.imageurl} name={item.name} urlName={item.urlName}/>);
+    const services = serviceData.map((item, index) => <ServiceCard key={index} imageurl={item.imageurl} name={item.name} urlName={item.urlName} data={item.data} setPosts={setPosts} setCurrentPage={setCurrentPage} />);
 
 
     return (
@@ -117,7 +118,7 @@ const Main = (props) => {
                             <p className='text-center'><a className='call-us-button' href="/contact-us">Call us now</a></p>
                         </div>
                         <div>
-                            <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]} ssr={true} infinite={true} autoPlaySpeed={10000} autoPlay={props.deviceType !== "mobile" ? true : false} transitionDuration={500}>
+                            <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} ssr={true} infinite={true} autoPlaySpeed={10000} transitionDuration={500}>
                                 {services}
                             </Carousel>
                         </div>

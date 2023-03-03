@@ -1,4 +1,4 @@
-export const GALLERYDATA = [
+export const galleryData = [
     {
         id: 1,
         category: 'Baths',

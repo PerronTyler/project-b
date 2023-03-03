@@ -1,52 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { GALLERYDATA } from './Images.js'
+import { galleryData } from './Images.js'
 import Footer from './Footer.jsx'
 import Pagination from './Pagination.js'
 import Posts from './Posts.js'
 
-const Gallery = () => {
-    const [posts, setPosts] = useState([])
-    const [loading, setLoading] = useState(false)
-    const [currentPage, setCurrentPage] = useState(1)
-    const [postsPerPage] = useState(6)
-    let kitchenData = {}
-    let decksData = {}
-    
-    useEffect(() => {
-        const fetchPosts = async () => {
-            setLoading(true);
-            const result = GALLERYDATA
-            setPosts(result)
-            setLoading(false)
-        }
-        fetchPosts();
-    }, [])
-
-    const filterCategory = (categoryItem) => {
-        const result = GALLERYDATA.filter((currentCategory) => {
-            return currentCategory.category === categoryItem;
-        });
-        setPosts(result);
-    }
-
-    const intializeKitchenData = (GALLERYDATA) => {
-        for (let index in GALLERYDATA) {
-            if(index[category] == "Kitchen") {
-                kitchenData[index] = GALLERYDATA[index] 
-            }
-        }
-    }
-    intializeKitchenData(GALLERYDATA)
-    
-    const intializeDecksData = (GALLERYDATA) => {
-        for (let index in GALLERYDATA) {
-            if(index[category] == "Decks") {
-                decksData[index] = GALLERYDATA[index] 
-            }
-        }
-    }
-    intializeDecksData(GALLERYDATA)
+const Gallery = ({setPosts, kitchenData, bathData, deckData, remodelData, setCurrentPage, posts, loading, currentPage, postsPerPage}) => {
 
     if (loading) {
         return <h2>Loading...</h2>
@@ -68,11 +26,11 @@ const Gallery = () => {
             <div className='text-center mt-10 mb-10'>
                 <h4>Filter by Category</h4>
                 <div className='p-4'>
-                    <button className='btns' onClick={() => setPosts(GALLERYDATA)}>All</button>
-                    <button className='btns' onClick={() => setPosts(kitchenData)}>Kitchens</button>
-                    <button className='btns' onClick={() => filterCategory('Baths')}>Baths</button>
-                    <button className='btns' onClick={() => filterCategory('Decks')}>Decks</button>
-                    <button className='btns' onClick={() => filterCategory('Remodels')}>Remodels</button>
+                    <button className='btns' onClick={() => setPosts(galleryData)}>All</button>
+                    <button className='btns' onClick={() => { setPosts(kitchenData); setCurrentPage(1) }}>Kitchens</button>
+                    <button className='btns' onClick={() => { setPosts(bathData); setCurrentPage(1) }}>Baths</button>
+                    <button className='btns' onClick={() => { setPosts(deckData); setCurrentPage(1) }}>Decks</button>
+                    <button className='btns' onClick={() => { setPosts(remodelData); setCurrentPage(1) }}>Remodels</button>
                 </div>
             </div>
             <div className='gallery-container'>
